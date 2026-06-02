@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PizzAmore - A verdadeira pizza artesanal. Monte sua pizza meio-a-meio e peça agora!">
+    <meta name="theme-color" content="#D32F2F">
+    <title>PizzAmore - Pizza Artesanal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="navbar">
+        <div class="container-nav">
+            <div class="logo">
+                <i class="fas fa-pizza-slice"></i>
+                <span>PizzAmore</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bem-vindo à PizzAmore</h1>
+            <p>A verdadeira pizza artesanal, feita com amor e ingredientes premium</p>
+            <button class="btn-primary" onclick="scrollTo('#cardapio')">Monte Sua Pizza</button>
+        </div>
+    </section>
+
+    <!-- Seção Principal: Pizza Meio-a-Meio -->
+    <section class="cardapio" id="cardapio">
+        <div class="container">
+            <h2>Monte Sua Pizza Perfeita</h2>
+            <p class="subtitle">Escolha dois sabores diferentes e veja a mudança em tempo real</p>
+
+            <div class="pizza-builder">
+                <!-- Coluna Esquerda: Seleção de Sabores -->
+                <div class="sabores-container">
+                    <div class="sabor-section">
+                        <h3>Metade Esquerda</h3>
+                        <div class="sabor-list" id="sabores-esquerda">
+                            <!-- Botões de sabores serão inseridos aqui -->
+                        </div>
+                    </div>
+
+                    <div class="sabor-section">
+                        <h3>Metade Direita</h3>
+                        <div class="sabor-list" id="sabores-direita">
+                            <!-- Botões de sabores serão inseridos aqui -->
+                        </div>
+                    </div>
+
+                    <div class="tamanho-section">
+                        <h3>Tamanho</h3>
+                        <div class="tamanho-list">
+                            <button class="btn-tamanho active" data-tamanho="pequena" data-preco="35">
+                                Pequena (30cm) - R$ 35
+                            </button>
+                            <button class="btn-tamanho" data-tamanho="media" data-preco="45">
+                                Média (40cm) - R$ 45
+                            </button>
+                            <button class="btn-tamanho" data-tamanho="grande" data-preco="55">
+                                Grande (50cm) - R$ 55
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Visualização da Pizza -->
+                <div class="pizza-preview">
+                    <div class="pizza-container">
+                        <img id="pizza-image" src="img/pizza-margherita.png" alt="Sua pizza">
+                        <div class="pizza-info">
+                            <p id="pizza-nome">Escolha os sabores</p>
+                            <p id="pizza-preco">R$ 35</p>
+                        </div>
+                    </div>
+
+                    <div class="observacoes">
+                        <h4>Observações</h4>
+                        <textarea id="observacoes" placeholder="Sem cebola, sem alho, etc..."></textarea>
+                    </div>
+
+                    <button class="btn-pedido" onclick="fazerPedido()">
+                        <i class="fab fa-whatsapp"></i> Fazer Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <h2>Sobre a PizzAmore</h2>
+            <p>Desde 2015, a PizzAmore traz a autenticidade italiana para sua mesa. Com ingredientes selecionados e receitas tradicionais, cada pizza é feita com paixão e dedicação.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PizzAmore</h4>
+                    <p>A verdadeira pizza artesanal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (81) 99473-852</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua da Pizza, 123 - Recife, PE</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PizzAmore. Todos os direitos reservados. | Desenvolvido por <strong>DEV ALBK</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/pizzas.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
