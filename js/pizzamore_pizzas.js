@@ -1,6 +1,7 @@
 /**
  * Dados das Pizzas - PizzAmore
- * Cada pizza tem: nome, descrição e imagem
+ * Cada pizza tem: id, nome, descrição e imagem
+ * Desenvolvido por DEV ALBK
  */
 
 const pizzas = [

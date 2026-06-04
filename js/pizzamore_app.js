@@ -1,6 +1,7 @@
 /**
  * PizzAmore - Lógica Principal
  * Sistema de Pizza Meio-a-Meio Interativa
+ * Desenvolvido por DEV ALBK
  */
 
 let pizzaSelecionada = {
@@ -100,7 +101,7 @@ function atualizarPizza() {
         imagemElement.src = pizzaSelecionada.direita.imagem;
         nomeElement.textContent = pizzaSelecionada.direita.nome;
     } else {
-        imagemElement.src = 'img/pizza-vazia.png';
+        imagemElement.src = 'img/margherita.png';
         nomeElement.textContent = 'Escolha os sabores';
     }
 
@@ -116,7 +117,7 @@ function fazerPedido() {
     }
 
     const observacoes = document.getElementById('observacoes').value;
-    const numeroWhats = '5581994733852';
+    const numeroWhats = '558199473852'; // ✅ CORRIGIDO: Número do WhatsApp correto
 
     // Monta a mensagem
     let mensagem = `*Novo Pedido PizzAmore*\n\n`;
