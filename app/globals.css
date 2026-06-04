@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  /* Background - tom escuro sofisticado */
+  --color-background: hsl(20 14% 8%);
+  --color-foreground: hsl(40 20% 95%);
+  
+  /* Primary - laranja apetitoso */
+  --color-primary: hsl(25 95% 53%);
+  --color-primary-foreground: hsl(0 0% 100%);
+  
+  /* Secondary - tom terroso/caramelo */
+  --color-secondary: hsl(35 30% 18%);
+  --color-secondary-foreground: hsl(40 20% 95%);
+  
+  /* Muted - cinza quente */
+  --color-muted: hsl(20 10% 15%);
+  --color-muted-foreground: hsl(25 10% 60%);
+  
+  /* Accent - dourado premium */
+  --color-accent: hsl(38 92% 50%);
+  --color-accent-foreground: hsl(20 14% 8%);
+  
+  /* Card */
+  --color-card: hsl(20 12% 12%);
+  --color-card-foreground: hsl(40 20% 95%);
+  
+  /* Border */
+  --color-border: hsl(25 15% 20%);
+  
+  /* Radius */
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+
+  /* Fonts */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 30%, transparent);
+  color: var(--color-foreground);
+}
